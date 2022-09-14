@@ -113,6 +113,7 @@ img {
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
+
   color: var(--accent-txt-cl);
 
   margin-right: 93px;
@@ -140,10 +141,12 @@ img {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
 
+  color: var(--secondary-txt-cl);
+
   padding-top: 32px;
   padding-bottom: 32px;
 
-  transition-property: color;
+  transition-property: color, text-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -151,6 +154,7 @@ img {
 .header .link:hover,
 .header .link:focus {
   color: var(--accent-txt-cl);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .header-contacts {
@@ -160,16 +164,18 @@ img {
 }
 
 .header-group .link {
-  color: var(--secondary-txt-cl);
+  /* color: var(--secondary-txt-cl); */
 
-  transition-property: color, text-shadow;
+  /* transition-property: color, text-shadow;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .link-nav.active {
   display: block;
+
   color: var(--accent-txt-cl);
+
   padding-bottom: 0;
 }
 
@@ -188,8 +194,8 @@ img {
 
 .header-group .link:hover,
 .header-group .link:focus {
-  color: var(--accent-txt-cl);
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* color: var(--accent-txt-cl); */
+  /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 }
 
 .header-contacts-link {
@@ -322,10 +328,14 @@ img {
 }
 
 .subtitle-work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 100%;
+  height: 70px;
   font-weight: 700;
   line-height: calc(16 / 14);
-  text-align: center;
   text-transform: uppercase;
 
   color: var(--white-txt-cl);
@@ -333,9 +343,6 @@ img {
 
   position: absolute;
   bottom: 0;
-
-  padding-top: 27px;
-  padding-bottom: 27px;
 }
 
 /* Наша команда */
@@ -719,6 +726,13 @@ img {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  visibility: visible;
+
+  transition-property: opacity, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
